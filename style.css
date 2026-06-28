@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+    padding:20px;
+}
+
+.welcome-screen,
+.game-screen{
+    width:100%;
+    max-width:650px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.hidden{
+    display:none;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.welcome-screen p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    color:#cbd5e1;
+}
+
+.mode-selection h2{
+    margin-bottom:20px;
+}
+
+.mode-selection button{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#pvp-btn{
+    background:#2563eb;
+    color:white;
+}
+
+#ai-btn{
+    background:#0ea5e9;
+    color:white;
+}
+
+.mode-selection button:hover{
+    transform:translateY(-3px);
+}
+
+.player-inputs{
+    margin-top:25px;
+}
+
+.player-inputs input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:1rem;
+}
+
+#start-btn{
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    background:#22c55e;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+}
+
+#start-btn:hover{
+    transform:translateY(-2px);
+}
+
+.game-info{
+    margin:20px 0;
+}
+
+#players-display{
+    margin-bottom:10px;
+    color:#f8fafc;
+}
+
+#turn-display{
+    color:#93c5fd;
+    font-weight:600;
+}
+
+.board{
+    width:330px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.cell{
+    aspect-ratio:1/1;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:3rem;
+    font-weight:700;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.cell:hover{
+    background:rgba(255,255,255,0.18);
+    transform:scale(1.03);
+}
+
+#result-message{
+    min-height:40px;
+    margin-bottom:20px;
+}
+
+.game-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.game-buttons button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+}
+
+#reset-btn{
+    background:#f59e0b;
+    color:white;
+}
+
+#new-game-btn{
+    background:#ef4444;
+    color:white;
+}
+
+@media(max-width:500px){
+
+    .welcome-screen,
+    .game-screen{
+        padding:25px;
+    }
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    .board{
+        width:270px;
+        height:270px;
+    }
+
+    .cell{
+        font-size:2.5rem;
+    }
+}
+
+.mode-selection button.active{
+    border:2px solid white;
+    transform:scale(1.03);
+}
+
+.cell{
+    color:white;
+}
+
+.cell.x{
+    color:#60a5fa;
+}
+
+.cell.o{
+    color:#f87171;
+}
+
+.cell.x{
+    color:#60a5fa;
+}
+
+.cell.o{
+    color:#f87171;
+}
+
+.mode-selection button.active{
+    border:2px solid white;
+}
+
+#result-message{
+    min-height:40px;
+    margin-bottom:20px;
+    font-size:1.4rem;
+    font-weight:700;
+    color:#22c55e;
+}
+
+.cell:hover{
+    transform:scale(1.05);
+    background:rgba(255,255,255,0.18);
+}
+
+.game-buttons button:hover,
+#start-btn:hover{
+    transform:translateY(-2px);
+}
